@@ -1,0 +1,22 @@
+{
+  "name": "lility",
+  "version": "1.0.0",
+  "description": "Minimal 11ty starter with webc, i18n, decapcms and more",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --incremental"
+  },
+  "keywords": [
+    "11ty",
+    "starter",
+    "webc",
+    "i18n",
+    "cms"
+  ],
+  "author": "Seb Méndez (guirdo.xyz)",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-webc": "^0.11.1"
+  }
+}
