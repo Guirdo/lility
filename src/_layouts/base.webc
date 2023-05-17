@@ -12,6 +12,7 @@
 </head>
 <body>
   
+  <navbar></navbar>
   <div @raw="content" webc:nokeep></div>
 
 </body>

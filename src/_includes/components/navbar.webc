@@ -1,0 +1,29 @@
+<nav class="flex-row p-md">
+  <div class="flex-row gap-sm align-items-center">
+    <figure class="w-2rem">
+      <img
+        src="/assets/images/lility.webp"
+        webc:raw
+      >
+    </figure>
+    <span class="fw-bold color-inherit">Lility</span>
+  </div>
+
+  <ul class="flex-row align-items-center mi-start-auto list-style-none gap-md">
+    <li webc:for="item of navLink">
+      <a
+        :href="item.url"
+        @text="item.label"
+      >
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<script webc:setup>
+const navLink = [
+  { label: 'Home', url: '/' },
+  { label: 'Blog', url: '/blog' },
+  { label: 'About', url: '/about' }
+]
+</script>
