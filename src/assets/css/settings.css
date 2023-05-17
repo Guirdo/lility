@@ -1,0 +1,11 @@
+:root {
+  --scale: 1.2;
+
+  --fs-md: clamp(1rem, 1rem + 0.5vi, 1.4rem);
+  --fs-sm: calc(var(--fs-md) / var(--scale));
+
+  /* Spacing */
+  --s-lg: 1.5rem;
+  --s-md:1rem;
+  --s-sm: 0.5rem;
+}
