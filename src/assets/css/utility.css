@@ -1,0 +1,14 @@
+.w-2rem {width: 2rem}
+
+.list-style-none {list-style: none}
+
+.gap-sm {gap: var(--s-sm)}
+.gap-md {gap: var(--s-md)}
+
+.mi-start-auto {margin-inline-start: auto}
+
+.p-md {padding: var(--s-md)}
+
+.justify-content-center {justify-content: center}
+
+.align-items-center {align-items: center}
