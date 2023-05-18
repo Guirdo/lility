@@ -5,6 +5,7 @@ const postcssImport = require('postcss-import');
 const postcssImportExtGlob = require('postcss-import-ext-glob');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const purgecss = require('@fullhuman/postcss-purgecss')
 
 module.exports = eleventyConfig => {
   eleventyConfig.addTemplateFormats('css');
@@ -21,6 +22,7 @@ module.exports = eleventyConfig => {
           postcssImportExtGlob,
           postcssImport,
           autoprefixer,
+          purgecss({content: ['./src/**/*.webc']}),
           cssnano
         ]).process(content, {
           from: path
