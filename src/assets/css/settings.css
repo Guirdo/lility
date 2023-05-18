@@ -1,11 +1,23 @@
 :root {
-  --scale: 1.2;
+  /* Typography */
+  --scale: 1.125;
+  --stack: clamp(1.25ex, 2.5vmax, 1.75ex); 
 
-  --fs-md: clamp(1rem, 1rem + 0.5vi, 1.4rem);
   --fs-sm: calc(var(--fs-md) / var(--scale));
+  --fs-md: clamp(1rem, calc(0.83rem + 0.87vw), 1.5rem);
+  --fs-lg: calc(var(--fs-md) * var(--scale));
+  --fs-xl: calc(var(--fs-lg) * var(--scale));
+  --fs-2xl: calc(var(--fs-xl) * var(--scale));
 
   /* Spacing */
+  --s-xl: 2rem;
   --s-lg: 1.5rem;
   --s-md:1rem;
-  --s-sm: 0.5rem;
+  --s-sm: 0.75rem;
+  --s-xs: 0.5rem;
+  --s-2xs: 0.25rem;
+
+  /* Color */
+  --primary: #4B83F2;
+  --secondary: #F2ACDA;
 }
