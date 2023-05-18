@@ -1,0 +1,6 @@
+<header class="wrapper flex-column p-md bg-primary">
+  <h1 class="text-align-center">11ty starter powered by WebC</h1>
+  <p class="text-align-center">
+    Ready for your personal blog or documentation web site.
+  </p>
+</header>
