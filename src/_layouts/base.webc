@@ -1,19 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title webc:is="meta-title" webc:nokeep></title>
 
-  <link rel="stylesheet" href="/assets/css/global.css" webc:raw>  
-  <style @raw="getBundle('css')" webc:keep></style>
-
-  <title>Lility</title>
-</head>
-<body>
+  <!--
+    <link rel="preload" href="/assets/fonts/Inconsolata-Bold.woff2" as="font" type="font/woff2" crossorigin webc:raw />
   
+    <link rel="preload" href="/assets/fonts/Inconsolata-Regular.woff2" as="font" type="font/woff2" crossorigin webc:raw /> 
+  -->
+
+  <link rel="stylesheet" href="/assets/css/global.css" webc:raw>
+  <style @raw="getBundle('css')" webc:keep></style>
+  <script @raw="getBundle('js')" webc:keep></script>
+
+
+  <base :href="page.url">
+
+  <meta name="description" :content="description">
+
+  <!-- Control the behavior of search engine crawling and indexing -->
+  <meta name="robots" content="index,follow"><!-- All Search Engines -->
+  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+  <meta name="generator" :content="eleventy.generator" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="canonical" :href="`${site.url}${page.url}`" />
+
+  <!-- <link rel="alternate" :hreflang="page.lang" :href="`${site.url }${ page.url }`" />
+
+  <link webc:for="link of locale_links(page.url)" rel="alternate" :hreflang="link.lang"
+    :href="`${site.url}${ link.url }`" /> -->
+
+  <!-- Open graph meta -->
+
+  <meta property="og:url" :href="`${$data.site.url}${page.url}`" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" :content="title" />
+
+  <meta property="og:image" :content="`${ featuredImage ? featuredImage : site.defaultFeaturedImage }`" />
+
+  <meta property="og:description" :content="description" />
+
+  <meta property="og:site_name" :content="site.name" />
+  <meta property="og:locale" :content="page.lang" />
+  <meta property="article:author" :content="site.author.name" />
+
+  <!-- Twitter meta -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" :content="site.author.twitterHandle" />
+  <meta name="twitter:creator" :content="site.author.twitterHandle" />
+  <meta name="twitter:dnt" content="on" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" webc:raw />
+  <link rel="icon" href="/favicon.ico" sizes="any" webc:raw />
+</head>
+
+<body>
+
   <navbar></navbar>
   <div @raw="content" webc:nokeep></div>
 
+  <script @raw="getBundle('js', 'defer')" webc:keep></script>
 </body>
+
 </html>
