@@ -68,6 +68,10 @@ h3 {
   font-size: var(--fs-lg);
 }
 
+small {
+  font-size: var(--s-sm);
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -84,6 +88,7 @@ h3 {
   }
 }
 
+/* purgecss start ignore */
 :where(h1,h2,h3) {
   margin-block-start: calc(var(--stack) * 1.5);
 }
@@ -99,3 +104,4 @@ h3 {
 :where(h1,h2,h3:is(:first-of-type)) {
   margin-block-start: 0;
 }
+/* purgecss end ignore */
