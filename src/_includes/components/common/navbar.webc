@@ -1,4 +1,4 @@
-<nav class="wrapper flex-row p-md">
+<nav class="flex-row p-md">
   <div class="flex-row gap-2xs align-items-center">
     <figure class="w-2rem">
       <img :src="$data.site.logo">

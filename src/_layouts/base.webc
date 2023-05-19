@@ -60,8 +60,12 @@
 
 <body>
 
-  <navbar></navbar>
-  <div @raw="content" webc:nokeep></div>
+  <div class="flex-column wrapper min-h-100vh">
+    <header>
+      <navbar webc:nokeep></navbar>
+    </header>
+    <main class="flex-grow-2" @raw="content"></main>
+  </div>
 
   <script @raw="getBundle('js', 'defer')" webc:keep></script>
 </body>
