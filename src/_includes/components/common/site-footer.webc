@@ -1,0 +1,10 @@
+<footer class="p-md bg-info">
+  <div>
+    <span @text="`Made with ❤️ by ${$data.site.author.name}`"></span> | 
+    <span @text="currentYear"></span>
+  </div>
+</footer>
+
+<script webc:setup>
+const currentYear = new Date().getFullYear()
+</script>

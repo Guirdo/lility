@@ -65,6 +65,7 @@
       <navbar webc:nokeep></navbar>
     </header>
     <main class="flex-grow-2" @raw="content"></main>
+    <site-footer webc:nokeep></site-footer>
   </div>
 
   <script @raw="getBundle('js', 'defer')" webc:keep></script>
