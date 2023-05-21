@@ -26,5 +26,6 @@
 
 .bg-primary {background-color: var(--primary)}
 .bg-secondary {background-color: var(--secondary)}
+.bg-info {background-color: var(--info)}
 
 .text-align-center {text-align: center}
