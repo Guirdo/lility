@@ -4,6 +4,15 @@ const { EleventyI18nPlugin } = require("@11ty/eleventy")
 
 module.exports = function (eleventyConfig) {
 
+  /* -------- Filters --------  */
+  glob.sync('./config/filters/*.js').forEach((file) => {
+    let filters = require('./' + file);
+    Object.keys(filters).forEach((name) => {
+      eleventyConfig.addFilter(name, filters[name]);
+    });
+  });
+
+  /* -------- Languages --------  */
   glob.sync('./config/languages/*.js').forEach((file) => {
     let plugin = require('./' + file)
     eleventyConfig.addPlugin(plugin)
