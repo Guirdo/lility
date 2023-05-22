@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  # branch: main # Branch to update (optional; defaults to main)
+
+# Uncomment below to enable drafts
+publish_mode: editorial_workflow
+
+media_folder: "src/assets/images/static" # Media files will be stored in the repo under images/uploads
+public_folder: "/assets/images/static" # The src attribute for uploaded media will begin with /images/uploads
+
+# # Cloudinary
+# media_library:
+#  name: cloudinary
+#  config:
+#    cloud_name: your_cloud_name
+#    api_key: your_api_key
+
+colletions:
+  - name: "post"
+    label: "Blog post"
+    folder: "src/blog/post"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: 
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Anon" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - { label: "Body", name: "body", widget: "markdown" }

@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget('./src/assets');
   eleventyConfig.addPassthroughCopy('src/assets/images/')
+  eleventyConfig.addPassthroughCopy("src/admin");
   
   return {
     dir: {
