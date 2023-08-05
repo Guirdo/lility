@@ -1,0 +1,6 @@
+<header class="flex-column p-md bg-secondary">
+  <h1 class="text-align-center">My personal blog</h1>
+  <p class="text-align-center">
+    You'll find my deepest thoughts about the things I'm learning
+  </p>
+</header>

@@ -1,0 +1,9 @@
+---
+layout: base.webc
+title: Blog
+eleventyExcludeFromCollections: true
+---
+
+<blog-hero></blog-hero>
+
+<post-list></post-list>

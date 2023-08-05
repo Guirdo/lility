@@ -1,0 +1,7 @@
+---
+layout: base.webc
+title: Docs
+eleventyExcludeFromCollections: true
+---
+
+<docs-hero></docs-hero>

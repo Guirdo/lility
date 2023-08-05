@@ -1,0 +1,42 @@
+<div class="post-list wrapper p-md">
+  <article class="post-card" webc:for="post of $data.collections['post']">
+    <h2>
+      <a
+        class="color-inherit"
+        :href="post.url"
+        @text="post.data.title"
+      >
+      </a>
+    </h2>
+    <p @text="post.data.summary"></p>
+    <div class="flex-row gap-xs flex-wrap">
+      <small @text="formatDateYYYYMMDD(post.data.date)"></small>
+      <small @text="getTags(post.data.tags)"></small>
+    </div>
+  </article>
+</div>
+
+<style>
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-lg)
+  }
+
+  .post-card {
+    border: 2px solid black;
+    padding: var(--s-xs)
+  }
+
+  @media screen and (min-width: 56rem) {
+    .post-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+
+<script webc:setup>
+function getTags(tags) {
+  return tags.filter((e) => e !== 'post' )
+}
+</script>

@@ -1,0 +1,29 @@
+---
+layout: base.webc
+---
+
+<article class="post p-md">
+  <header>
+    <h1 @text="title"></h1>
+    <p @text="summary"></p>
+    <small>
+      <date @text="formatDateYYYYMMDD(date)"></date>
+    </small>
+    <p>
+      <span @webc:for="item of tags"></span>
+    </p>
+  </header>
+
+  <main @raw="content"></main>
+
+  <footer>
+    
+  </footer>
+</article>
+
+<style>
+  .post {
+    max-width: 56ch;
+    margin-inline: auto;
+  }
+</style>

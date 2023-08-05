@@ -1,0 +1,14 @@
+{
+  "files.autoSave": "onFocusChange",
+  "gitmoji.addCustomEmoji": [
+    {
+      "emoji": "🧩",
+      "code": ":jigsaw:",
+      "description": "Add or update component"
+    }
+  ],
+  "cSpell.language": "en,es",
+  "cSpell.enableFiletypes": [
+    "nunjucks"
+  ]
+}

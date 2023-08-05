@@ -2,6 +2,9 @@ const glob = require('fast-glob')
 const pluginWebc = require("@11ty/eleventy-plugin-webc")
 const { EleventyI18nPlugin } = require("@11ty/eleventy")
 
+/**
+ *  @param {import("@11ty/eleventy/src/UserConfig")} eleventyConfig
+ */
 module.exports = function (eleventyConfig) {
 
   /* -------- Filters --------  */
